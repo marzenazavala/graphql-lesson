@@ -1,5 +1,4 @@
 export const addItemToCart = (cartItems, cartItemToAdd) => {
-  debugger;
   const existingCartItem = cartItems.find(
     cartItem => cartItem.id === cartItemToAdd.id
   );
@@ -31,11 +30,11 @@ export const removeItemFromCart = (cartItems, cartItemToRemove) => {
   );
 };
 
-export const getCartItemCount = cartItems => cartItems.reduce(
-  (accumalatedQuantity, cartItem) =>
-    accumalatedQuantity + cartItem.quantity,
-  0
-);
+export const getCartItemCount = cartItems =>
+  cartItems.reduce(
+    (accumalatedQuantity, cartItem) => accumalatedQuantity + cartItem.quantity,
+    0
+  );
 
 export const getCartTotal = cartItems =>
   cartItems.reduce(

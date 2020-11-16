@@ -5,7 +5,9 @@ import StripeCheckoutButton from '../../components/stripe-button/stripe-button.c
 
 import './checkout.styles.scss';
 
-const CheckoutPage = ({ cartItems, total }) => (
+const CheckoutPage = ({ cartItems, total }) => {
+debugger;
+return(
   <div className='checkout-page'>
     <div className='checkout-header'>
       <div className='header-block'>
@@ -24,9 +26,9 @@ const CheckoutPage = ({ cartItems, total }) => (
         <span>Remove</span>
       </div>
     </div>
-    {cartItems.map(cartItem => (
+    {/* {cartItems.map(cartItem => (
       <CheckoutItem key={cartItem.id} cartItem={cartItem} />
-    ))}
+    ))} */}
     <div className='total'>TOTAL: ${total}</div>
     <div className='test-warning'>
       *Please use the following test credit card for payments*
@@ -35,6 +37,6 @@ const CheckoutPage = ({ cartItems, total }) => (
     </div>
     <StripeCheckoutButton price={total} />
   </div>
-);
+)};
 
 export default CheckoutPage;
