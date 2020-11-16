@@ -13,7 +13,7 @@ import {resolvers, typeDefs} from './graphql/resolvers';
 import { default as data } from './graphql/initial-data';
 
 import './index.css';
-import App from './App';
+import {default as App} from './App.container';
 
 const httpLink = createHttpLink({
   uri: 'https://crwn-clothing.com'
