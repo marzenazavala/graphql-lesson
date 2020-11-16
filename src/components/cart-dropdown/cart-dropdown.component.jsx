@@ -6,7 +6,9 @@ import CartItem from '../cart-item/cart-item.component';
 
 import './cart-dropdown.styles.scss';
 
-const CartDropdown = ({ cartItems, history, toggleCartHidden }) => (
+const CartDropdown = ({ cartItems, history, toggleCartHidden }) => {
+  debugger;
+  return (
   <div className='cart-dropdown'>
     <div className='cart-items'>
       {cartItems.length ? (
@@ -26,7 +28,8 @@ const CartDropdown = ({ cartItems, history, toggleCartHidden }) => (
       GO TO CHECKOUT
     </CustomButton>
   </div>
-);
+  )
+};
 
 
 export default withRouter(CartDropdown);
